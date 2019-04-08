@@ -1,0 +1,31 @@
+aggregation_metric: matthews_correlation_holdout
+architecture: net
+batch: 10
+callbacks:
+  EarlyStopping: {monitor: val_binary_accuracy, patience: 100, verbose: 1}
+  ReduceLROnPlateau: {cooldown: 5, factor: 0.5, mode: auto, monitor: val_binary_accuracy,
+    patience: 16, verbose: 1}
+dataset:
+  getTrain: [false, false]
+datasets:
+  test:
+    getTest: [false, false]
+declarations:
+  net:
+  - bidirectional:
+    - lstm: [300, true]
+  - {attention: 100}
+  - dense: [164, relu]
+  - dense: [1, sigmoid]
+imports: [layers, ds]
+inference_batch: 128
+loss: binary_crossentropy
+metrics: [binary_accuracy, binary_crossentropy, matthews_correlation]
+optimizer: Adam
+primary_metric: val_binary_crossentropy
+primary_metric_mode: min
+stages:
+- {epochs: 150}
+stratified: true
+testSplit: 0.4
+testSplitSeed: 15000

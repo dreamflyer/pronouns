@@ -1,0 +1,651 @@
+errors:
+- {trace: "Traceback (most recent call last):\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1334, in _do_call\n    return fn(*args)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1317, in _run_fn\n    self._extend_graph()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1352, in _extend_graph\n    tf_session.ExtendSession(self._session)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[{{node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform}}\
+    \ = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=502865, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nDuring\
+    \ handling of the above exception, another exception occurred:\n\nTraceback (most\
+    \ recent call last):\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 203, in __call__\n    st.execute(self.folds, model, ec,copy.deepcopy(cb))\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\", line\
+    \ 1046, in execute\n    kf.trainOnFold(ec.fold, model, cb, self.epochs, self.negatives,\
+    \ subsample=ec.subsample,validation_negatives=self.validation_negatives,verbose=self.cfg.verbose,\
+    \ initial_epoch=kepoch)\n  File \"/Users/dreamflyer/musket_core/musket_core/datasets.py\"\
+    , line 596, in trainOnFold\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1419, in fit_generator\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training_generator.py\"\
+    , line 217, in fit_generator\n    class_weight=class_weight)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1218, in train_on_batch\n    outputs = self.train_function(ins)\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 2877, in __call__\n    if hasattr(get_session(), '_make_callable_from_options'):\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 199, in get_session\n    [tf.is_variable_initialized(v) for v in candidate_vars])\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 929, in run\n    run_metadata_ptr)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1152, in _run\n    feed_dict_tensor, options, run_metadata)\n  File \"\
+    /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1328, in _do_run\n    run_metadata)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1348, in _do_call\n    raise type(e)(node_def, op, message)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=502865, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=502865, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\n",
+  type: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, value: "Cannot\
+    \ assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=502865, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=502865, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n"}
+- {trace: "Traceback (most recent call last):\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1334, in _do_call\n    return fn(*args)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1317, in _run_fn\n    self._extend_graph()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1352, in _extend_graph\n    tf_session.ExtendSession(self._session)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[{{node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform}}\
+    \ = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8984016, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nDuring\
+    \ handling of the above exception, another exception occurred:\n\nTraceback (most\
+    \ recent call last):\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 203, in __call__\n    st.execute(self.folds, model, ec,copy.deepcopy(cb))\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\", line\
+    \ 1046, in execute\n    kf.trainOnFold(ec.fold, model, cb, self.epochs, self.negatives,\
+    \ subsample=ec.subsample,validation_negatives=self.validation_negatives,verbose=self.cfg.verbose,\
+    \ initial_epoch=kepoch)\n  File \"/Users/dreamflyer/musket_core/musket_core/datasets.py\"\
+    , line 596, in trainOnFold\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1419, in fit_generator\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training_generator.py\"\
+    , line 217, in fit_generator\n    class_weight=class_weight)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1218, in train_on_batch\n    outputs = self.train_function(ins)\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 2877, in __call__\n    if hasattr(get_session(), '_make_callable_from_options'):\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 199, in get_session\n    [tf.is_variable_initialized(v) for v in candidate_vars])\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 929, in run\n    run_metadata_ptr)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1152, in _run\n    feed_dict_tensor, options, run_metadata)\n  File \"\
+    /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1328, in _do_run\n    run_metadata)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1348, in _do_call\n    raise type(e)(node_def, op, message)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8984016, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8984016, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\n",
+  type: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, value: "Cannot\
+    \ assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8984016, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8984016, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n"}
+- {trace: "Traceback (most recent call last):\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1334, in _do_call\n    return fn(*args)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1317, in _run_fn\n    self._extend_graph()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1352, in _extend_graph\n    tf_session.ExtendSession(self._session)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[{{node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform}}\
+    \ = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=6532017, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nDuring\
+    \ handling of the above exception, another exception occurred:\n\nTraceback (most\
+    \ recent call last):\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 203, in __call__\n    st.execute(self.folds, model, ec,copy.deepcopy(cb))\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\", line\
+    \ 1046, in execute\n    kf.trainOnFold(ec.fold, model, cb, self.epochs, self.negatives,\
+    \ subsample=ec.subsample,validation_negatives=self.validation_negatives,verbose=self.cfg.verbose,\
+    \ initial_epoch=kepoch)\n  File \"/Users/dreamflyer/musket_core/musket_core/datasets.py\"\
+    , line 596, in trainOnFold\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1419, in fit_generator\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training_generator.py\"\
+    , line 217, in fit_generator\n    class_weight=class_weight)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1218, in train_on_batch\n    outputs = self.train_function(ins)\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 2877, in __call__\n    if hasattr(get_session(), '_make_callable_from_options'):\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 199, in get_session\n    [tf.is_variable_initialized(v) for v in candidate_vars])\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 929, in run\n    run_metadata_ptr)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1152, in _run\n    feed_dict_tensor, options, run_metadata)\n  File \"\
+    /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1328, in _do_run\n    run_metadata)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1348, in _do_call\n    raise type(e)(node_def, op, message)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=6532017, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=6532017, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\n",
+  type: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, value: "Cannot\
+    \ assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=6532017, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=6532017, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n"}
+- {trace: "Traceback (most recent call last):\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1334, in _do_call\n    return fn(*args)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1317, in _run_fn\n    self._extend_graph()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1352, in _extend_graph\n    tf_session.ExtendSession(self._session)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[{{node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform}}\
+    \ = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8072091, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nDuring\
+    \ handling of the above exception, another exception occurred:\n\nTraceback (most\
+    \ recent call last):\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 203, in __call__\n    st.execute(self.folds, model, ec,copy.deepcopy(cb))\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\", line\
+    \ 1046, in execute\n    kf.trainOnFold(ec.fold, model, cb, self.epochs, self.negatives,\
+    \ subsample=ec.subsample,validation_negatives=self.validation_negatives,verbose=self.cfg.verbose,\
+    \ initial_epoch=kepoch)\n  File \"/Users/dreamflyer/musket_core/musket_core/datasets.py\"\
+    , line 596, in trainOnFold\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1419, in fit_generator\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training_generator.py\"\
+    , line 217, in fit_generator\n    class_weight=class_weight)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1218, in train_on_batch\n    outputs = self.train_function(ins)\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 2877, in __call__\n    if hasattr(get_session(), '_make_callable_from_options'):\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 199, in get_session\n    [tf.is_variable_initialized(v) for v in candidate_vars])\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 929, in run\n    run_metadata_ptr)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1152, in _run\n    feed_dict_tensor, options, run_metadata)\n  File \"\
+    /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1328, in _do_run\n    run_metadata)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1348, in _do_call\n    raise type(e)(node_def, op, message)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8072091, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8072091, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\n",
+  type: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, value: "Cannot\
+    \ assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8072091, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=8072091, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n"}
+- {trace: "Traceback (most recent call last):\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1334, in _do_call\n    return fn(*args)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1317, in _run_fn\n    self._extend_graph()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1352, in _extend_graph\n    tf_session.ExtendSession(self._session)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[{{node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform}}\
+    \ = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=3476143, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nDuring\
+    \ handling of the above exception, another exception occurred:\n\nTraceback (most\
+    \ recent call last):\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 203, in __call__\n    st.execute(self.folds, model, ec,copy.deepcopy(cb))\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\", line\
+    \ 1046, in execute\n    kf.trainOnFold(ec.fold, model, cb, self.epochs, self.negatives,\
+    \ subsample=ec.subsample,validation_negatives=self.validation_negatives,verbose=self.cfg.verbose,\
+    \ initial_epoch=kepoch)\n  File \"/Users/dreamflyer/musket_core/musket_core/datasets.py\"\
+    , line 596, in trainOnFold\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1419, in fit_generator\n    initial_epoch=initial_epoch)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training_generator.py\"\
+    , line 217, in fit_generator\n    class_weight=class_weight)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/training.py\"\
+    , line 1218, in train_on_batch\n    outputs = self.train_function(ins)\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 2877, in __call__\n    if hasattr(get_session(), '_make_callable_from_options'):\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 199, in get_session\n    [tf.is_variable_initialized(v) for v in candidate_vars])\n\
+    \  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 929, in run\n    run_metadata_ptr)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1152, in _run\n    feed_dict_tensor, options, run_metadata)\n  File \"\
+    /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1328, in _do_run\n    run_metadata)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/client/session.py\"\
+    , line 1348, in _do_call\n    raise type(e)(node_def, op, message)\ntensorflow.python.framework.errors_impl.InvalidArgumentError:\
+    \ Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=3476143, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=3476143, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\n",
+  type: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, value: "Cannot\
+    \ assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=3476143, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n\nCaused\
+    \ by op 'bidirectional_1/forward_lstm_1/random_uniform/RandomUniform', defined\
+    \ at:\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 884, in _bootstrap\n    self._bootstrap_inner()\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/threading.py\"\
+    , line 916, in _bootstrap_inner\n    self.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 97, in run\n    exp.run()\n  File \"/Users/dreamflyer/musket_core/musket_core/parralel.py\"\
+    , line 64, in run\n    else: self.result=self.func()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 194, in __call__\n    model = self.cfg.createAndCompile()\n  File \"/Users/dreamflyer/musket_core/musket_core/generic_config.py\"\
+    , line 430, in createAndCompile\n    return self.compile(self.createNet(), self.createOptimizer(lr=lr),\
+    \ loss=loss)\n  File \"/Users/dreamflyer/musket_core/musket_core/generic.py\"\
+    , line 37, in createNet\n    m=net.create_model_from_config(self.declarations,inputs,self.architecture,self.imports)\n\
+    \  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\", line\
+    \ 381, in create_model_from_config\n    out=d.model(name, inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 359, in model\n    m=self.instantiate(name,inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 356, in instantiate\n    return v.build(inputs)\n  File \"/Users/dreamflyer/musket_core/musket_core/net_declaration.py\"\
+    , line 267, in build\n    res=l(inp)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 427, in __call__\n    return super(Bidirectional, self).__call__(inputs,\
+    \ **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 431, in __call__\n    self.build(unpack_singleton(input_shapes))\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/wrappers.py\"\
+    , line 567, in build\n    self.forward_layer.build(input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 494, in build\n    self.cell.build(step_input_shape)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/layers/recurrent.py\"\
+    , line 1869, in build\n    constraint=self.kernel_constraint)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/legacy/interfaces.py\"\
+    , line 91, in wrapper\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/engine/base_layer.py\"\
+    , line 249, in add_weight\n    weight = K.variable(initializer(shape),\n  File\
+    \ \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/initializers.py\"\
+    , line 218, in __call__\n    dtype=dtype, seed=self.seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py\"\
+    , line 4350, in random_uniform\n    dtype=dtype, seed=seed)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py\"\
+    , line 243, in random_uniform\n    rnd = gen_random_ops.random_uniform(shape,\
+    \ dtype, seed=seed1, seed2=seed2)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/ops/gen_random_ops.py\"\
+    , line 733, in random_uniform\n    name=name)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py\"\
+    , line 787, in _apply_op_helper\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py\"\
+    , line 488, in new_func\n    return func(*args, **kwargs)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 3274, in create_op\n    op_def=op_def)\n  File \"/Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/tensorflow/python/framework/ops.py\"\
+    , line 1770, in __init__\n    self._traceback = tf_stack.extract_stack()\n\nInvalidArgumentError\
+    \ (see above for traceback): Cannot assign a device for operation bidirectional_1/forward_lstm_1/random_uniform/RandomUniform:\
+    \ Operation was explicitly assigned to /device:GPU:0 but available devices are\
+    \ [ /job:localhost/replica:0/task:0/device:CPU:0 ]. Make sure the device specification\
+    \ refers to a valid device.\n\t [[node bidirectional_1/forward_lstm_1/random_uniform/RandomUniform\
+    \ (defined at /Users/dreamflyer/.conda/envs/surf360cam/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4350)\
+    \  = RandomUniform[T=DT_INT32, dtype=DT_FLOAT, seed=87654321, seed2=3476143, _device=\"\
+    /device:GPU:0\"](bidirectional_1/forward_lstm_1/random_uniform/shape)]]\n"}
