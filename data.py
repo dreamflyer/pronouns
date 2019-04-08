@@ -30,7 +30,10 @@ def read_data(file_name):
     return result
 
 class DataReader:
-    def __init__(self, file_name, wiki_path):
+    def __init__(self, file_name, wiki_path=None):
+        if not wiki_path:
+            self.wiki_path = os.path.join(os.path.dirname(__file__), "wiki")
+
         self.data = read_data(file_name)
 
         self.ids = [item for item in  self.data.keys() if not item == 'ID']
