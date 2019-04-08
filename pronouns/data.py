@@ -33,13 +33,13 @@ class DataReader:
     def __init__(self, file_name, wiki_path=None):
         if not wiki_path:
             self.wiki_path = os.path.join(os.path.dirname(__file__), "wiki")
+        else:
+            self.wiki_path = wiki_path
 
         self.data = read_data(file_name)
 
         self.ids = [item for item in  self.data.keys() if not item == 'ID']
-
-        self.wiki_path = wiki_path
-
+    
     def get_ids(self):
         return [it for it in self.ids if os.path.exists(self.wiki_path + "/" + it + ".data")]
 
